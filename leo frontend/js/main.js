@@ -254,8 +254,8 @@ const fallbackData = {
     banners: [
         {
             desktopImageUrl: "assets/images/desktopimage.png",
-            mobileImageUrl: "assets/images/mobileimage.png",
-            imageUrl: "assets/images/mobileimage.png"
+            mobileImageUrl: "assets/images/versionimage.png",
+            imageUrl: "assets/images/versionimage.png"
         }
     ],
     orders: [
