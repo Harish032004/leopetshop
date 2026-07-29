@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Pet Barkery | Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="shop">
+    <header class="site-header" id="site-header"></header>
+    <main class="page-shell">
+        <div class="container">
+            <section class="page-hero">
+                <span class="eyebrow">Shop Leo's collection</span>
+                <h1>Premium pet picks for every playful personality</h1>
+                <p>Browse nourishing food, stylish accessories, grooming favorites, and cozy essentials for dogs, cats, birds, fish, and more.</p>
+            </section>
+            <section class="layout-two-column">
+                <aside class="filter-panel detail-panel" id="shop-filter-panel">
+                    <div class="filter-group shop-primary-filter-group shop-filter-panel">
+                        <h3>Shop by pet</h3>
+                        <form class="shop-filter-form" id="shop-pet-type-form">
+                            <div class="shop-filter-field shop-filter-field-wide">
+                                <label for="shop-pet-type">Pet</label>
+                                <select id="shop-pet-type" name="petType">
+                                    <option value="">All pets</option>
+                                </select>
+                            </div>
+                            <div class="shop-filter-field shop-filter-field-wide">
+                                <label for="shop-product-type">Product type</label>
+                                <select id="shop-product-type" name="productType">
+                                    <option value="">All product types</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="filter-group shop-selected-filter-group">
+                        <h3>Selected filters</h3>
+                        <div class="filter-selected-summary" id="shop-selected-filters"></div>
+                    </div>
+                    <button class="shop-mobile-filter-toggle" type="button" data-shop-filter-toggle aria-expanded="false">
+                        <span>More filters</span>
+                        <strong>Price, category, color, age</strong>
+                    </button>
+                    <div class="filter-group shop-filter-panel shop-secondary-filter">
+                        <h3>Price and sort</h3>
+                        <form class="shop-filter-form" id="shop-price-sort-form">
+                            <div class="shop-filter-field">
+                                <label for="shop-min-price">Min price</label>
+                                <input type="number" id="shop-min-price" name="minPrice" min="0" step="1" inputmode="numeric" placeholder="0">
+                            </div>
+                            <div class="shop-filter-field">
+                                <label for="shop-max-price">Max price</label>
+                                <input type="number" id="shop-max-price" name="maxPrice" min="0" step="1" inputmode="numeric" placeholder="Any">
+                            </div>
+                            <div class="shop-filter-field shop-filter-field-wide">
+                                <label for="shop-sort-by">Sort by</label>
+                                <select id="shop-sort-by" name="sort">
+                                    <option value="">Featured / Relevance</option>
+                                    <option value="price-asc">Price: Low to High</option>
+                                    <option value="price-desc">Price: High to Low</option>
+                                    <option value="newest">Newest First</option>
+                                </select>
+                            </div>
+                            <div class="shop-filter-actions">
+                                <button type="submit" class="shop-filter-apply">Apply filters</button>
+                                <a class="shop-filter-reset" href="shop.html">Reset</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="filter-group shop-secondary-filter">
+                        <h3>Popular categories</h3>
+                        <div class="filter-chip-row" id="shop-category-chips"></div>
+                    </div>
+                    <div class="filter-group shop-secondary-filter">
+                        <h3>Quick filters</h3>
+                        <div class="filter-chip-row" id="shop-quick-filter-chips">
+                            <a class="filter-chip" href="shop.html?filter=featured">Featured</a>
+                            <a class="filter-chip" href="shop.html?filter=new">New Arrivals</a>
+                            <a class="filter-chip" href="shop.html?filter=offers">Offers</a>
+                            <a class="filter-chip" href="shop.html?filter=low-stock">Low Stock</a>
+                        </div>
+                    </div>
+                    <div class="filter-group shop-secondary-filter">
+                        <h3>Filter by color</h3>
+                        <div class="filter-chip-row" id="shop-color-chips"></div>
+                    </div>
+                    <div class="filter-group shop-secondary-filter">
+                        <h3>Filter by age</h3>
+                        <div class="filter-chip-row" id="shop-age-chips"></div>
+                    </div>
+                </aside>
+                <div>
+                    <div class="section-header">
+                        <div>
+                            <span class="eyebrow">Curated for happy paws</span>
+                            <h2 id="shop-title">All products</h2>
+                        </div>
+                    </div>
+                    <div class="shop-results-meta" id="shop-results-meta"></div>
+                    <div class="product-grid" id="shop-product-grid"></div>
+                    <div class="shop-pagination" id="shop-pagination"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer" id="site-footer"></footer>
+    <script src="js/api.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/products.js" defer></script>
+</body>
+</html>
