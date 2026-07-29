@@ -254,8 +254,8 @@ const fallbackData = {
     banners: [
         {
             desktopImageUrl: "assets/images/desktopimage.png",
-            mobileImageUrl: "assets/images/versionimage.png",
-            imageUrl: "assets/images/versionimage.png"
+            mobileImageUrl: "assets/images/mobileimage.png",
+            imageUrl: "assets/images/mobileimage.png"
         }
     ],
     orders: [
@@ -2372,7 +2372,7 @@ function getFallbackHeroSlides() {
     return [
         {
             desktopImageUrl: "assets/images/version2.png",
-            mobileImageUrl: "assets/images/mobileimage.png",
+            mobileImageUrl: "assets/images/versionimage.png",
             alt: "Pet care essentials for happy homes"
         }
     ];
@@ -2434,7 +2434,7 @@ function getHeroSlides(banners = []) {
 function renderHeroBannerSlidesMarkup(banners = []) {
     const slides = getHeroSlides(banners);
     const fallbackDesktopFallback = "assets/images/version2.png";
-    const fallbackMobileFallback = "assets/images/mobileimage.png";
+    const fallbackMobileFallback = "assets/images/versionimage.png";
 
     return `
         <div class="hero-banner-track" data-hero-track>
@@ -2789,7 +2789,7 @@ async function loadHomepageBanners() {
     const fallbackSlides = [
         {
             desktopImageUrl: resolveMediaUrl("assets/images/version2.png"),
-            mobileImageUrl: resolveMediaUrl("assets/images/mobileimage.png"),
+            mobileImageUrl: resolveMediaUrl("assets/images/versionimage.png"),
             imageUrl: resolveMediaUrl("assets/images/version2.png"),
             title: "Leo's Pet Barkery banner",
             active: true
